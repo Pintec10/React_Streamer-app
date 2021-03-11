@@ -1,3 +1,21 @@
+# About this App
+
+This is a simple Twitch-like app to stream videos. This repository contains the front-end part of the application, however in order for it to be fully working, a back-end server, a RTMP server and OBS (Open BroadCaster Server) are needed.
+
+## Backend server
+
+1. Create a folder for the server
+2. Initialize npm: `npm init`
+3. Install json-server: `npm install --save json-server`
+4. Modify package.json with the following script:
+```
+"scripts": {
+		"start": "json-server -p 3001 -w db.json"
+}
+```
+5. Run the server from its own folder with `npm start`
+
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
