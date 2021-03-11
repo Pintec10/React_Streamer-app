@@ -6,7 +6,7 @@ This is a simple Twitch-like app to stream videos. This repository contains the 
 
 1. Create a folder for the server
 2. Initialize npm: `npm init`
-3. Install json-server: `npm install --save json-server`
+3. Install [json-server](https://github.com/typicode/json-server): `npm install --save json-server`
 4. Modify package.json with the following script:
 ```
 "scripts": {
@@ -14,6 +14,51 @@ This is a simple Twitch-like app to stream videos. This repository contains the 
 }
 ```
 5. Run the server from its own folder with `npm start`
+
+## RTMP server
+
+1. Create a folder for the server
+2. Initialize npm: `npm init`
+3. Install [node-media-server](https://github.com/illuspas/Node-Media-Server): `npm install --save node-media-server`
+4. Create a file called index.js in the root of the RTMP server folder with the following script:
+```
+const NodeMediaServer = require('node-media-server');
+
+const config = {
+	rtmp: {
+		port: 1935,
+		chunk_size: 60000,
+		gop_cache: true,
+		ping: 30,
+		ping_timeout: 60
+	},
+	http: {
+		port: 8000,
+		allow_origin: '*'
+	}
+};
+
+var nms = new NodeMediaServer(config)
+nms.run();
+```
+5. Modify package.json with the following script:
+```
+"scripts": {
+		"start": "node index.js"
+}
+```
+6. Run the server from its own folder with `npm start`
+
+## OBS (Open Broadcaster Software)
+
+1. Install OBS from [here](https://obsproject.com/)
+2. Configure your stream as follows in Settings -> Stream:
+   - Stream Type : Custom Streaming Server
+   - URL : rtmp://localhost/live
+   - Stream key : id of the stream, which can be recovered from the url of the Stream's page in the app: http://localhost:3000/streams/{:id} )
+
+
+---
 
 
 # Getting Started with Create React App
