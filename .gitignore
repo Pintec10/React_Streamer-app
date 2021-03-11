@@ -24,3 +24,4 @@ yarn-error.log*
 
 Notes.txt
 .eslintcache
+config.js
