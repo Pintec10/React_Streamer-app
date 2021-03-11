@@ -55,7 +55,7 @@ nms.run();
 2. Configure your stream as follows in Settings -> Stream:
    - Stream Type : Custom Streaming Server
    - URL : rtmp://localhost/live
-   - Stream key : id of the stream, which can be recovered from the url of the Stream's page in the app: `http://localhost:3000/streams/{:id}` )
+   - Stream key : id of the stream, which can be recovered from the url of the Stream's page in the app: `http://localhost:3000/streams/{:id}`
 
 
 ---
