@@ -3,7 +3,7 @@
 This is a simple Twitch-like app to stream videos. This repository contains the front-end part of the application, however in order for it to be fully working, the following elements are also needed:
 1. a back-end server
 2. a RTMP server 
-3. OBS (Open Broadcaster Software) 
+3. OBS (Open Broadcaster Software) - needed only if you want to actually create real videos; the general functioning of the app can be explored even without it
 
 ## Backend server
 
